@@ -87,7 +87,7 @@ public class ListFragment extends Fragment {
     private void observeViewModel()
     {
         viewModel.dogs.observe(this, dogs -> {
-            if (dogs != null && dogs instanceof List){
+            if (dogs != null && dogs instanceof List) {
                 dogsList.setVisibility(View.VISIBLE);
                 dogsListAdapter.updateDogsList(dogs);
             }
