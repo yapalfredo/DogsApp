@@ -12,6 +12,7 @@ import com.example.dogsapp.model.DogDao;
 import com.example.dogsapp.model.DogDatabase;
 import com.example.dogsapp.model.DogsApi;
 import com.example.dogsapp.model.DogsApiService;
+import com.example.dogsapp.util.NotificationsHelper;
 import com.example.dogsapp.util.SharedPreferencesHelper;
 
 import java.util.ArrayList;
@@ -80,6 +81,7 @@ public class ListViewModel extends AndroidViewModel {
                             public void onSuccess(List<DogBreed> dogBreeds) {
                                 insertTask = new InsertDogsTask();
                                 insertTask.execute(dogBreeds);
+                                NotificationsHelper.getInstance(getApplication()).createNotification();
                             }
 
                             @Override
