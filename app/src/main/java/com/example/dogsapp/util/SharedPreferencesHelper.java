@@ -33,4 +33,9 @@ public class SharedPreferencesHelper {
         return prefs.getLong(PREF_TIME, 0);
     }
 
+    public String getCacheDuration(){
+        return prefs.getString("pref_cache_duration","");
+
+    }
+
 }

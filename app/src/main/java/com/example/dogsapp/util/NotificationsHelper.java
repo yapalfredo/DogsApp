@@ -27,12 +27,12 @@ public class NotificationsHelper {
     private Context context;
 
     //Constructor
-    private NotificationsHelper (Context context){
+    private NotificationsHelper(Context context) {
         this.context = context;
     }
 
     public static NotificationsHelper getInstance(Context context) {
-        if (instance == null){
+        if (instance == null) {
             instance = new NotificationsHelper(context);
         }
         return instance;
@@ -82,5 +82,4 @@ public class NotificationsHelper {
             notificationManager.createNotificationChannel(channel);
         }
     }
-
 }

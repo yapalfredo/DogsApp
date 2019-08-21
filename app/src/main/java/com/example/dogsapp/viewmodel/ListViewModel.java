@@ -2,6 +2,7 @@ package com.example.dogsapp.viewmodel;
 
 import android.app.Application;
 import android.os.AsyncTask;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
@@ -49,6 +50,7 @@ public class ListViewModel extends AndroidViewModel {
     }
 
     public void refresh() {
+        checkCacheDuration();
         long updateTime = prefHelper.getUpdateTime();
         long currentTime = System.nanoTime();
 
@@ -60,14 +62,28 @@ public class ListViewModel extends AndroidViewModel {
     }
 
     //By pass the cache and update from remote
-    public void refreshBypassCache(){
+    public void refreshBypassCache() {
         fetchFromRemote();
+    }
+
+    private void checkCacheDuration() {
+        String cachePreference = prefHelper.getCacheDuration();
+
+        if (!cachePreference.equals("")) {
+            try {
+                int cachePreferenceInt = Integer.parseInt(cachePreference);
+                refreshTime = cachePreferenceInt * 1000 * 1000 * 1000L; // milli * micro * nano
+            } catch (NumberFormatException e) {
+                e.printStackTrace();
+            }
+        }
     }
 
     private void fetchFromDatabase() {
         loading.setValue(true);
         retrieveTask = new RetrieveDogsTask();
         retrieveTask.execute();
+        Toast.makeText(getApplication(), "Data retrieved from local", Toast.LENGTH_SHORT).show();
     }
 
     private void fetchFromRemote() {
@@ -82,6 +98,7 @@ public class ListViewModel extends AndroidViewModel {
                                 insertTask = new InsertDogsTask();
                                 insertTask.execute(dogBreeds);
                                 NotificationsHelper.getInstance(getApplication()).createNotification();
+                                Toast.makeText(getApplication(), "Data retrieved from remote", Toast.LENGTH_SHORT).show();
                             }
 
                             @Override
