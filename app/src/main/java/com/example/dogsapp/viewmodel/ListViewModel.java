@@ -11,7 +11,7 @@ import androidx.lifecycle.MutableLiveData;
 import com.example.dogsapp.model.DogBreed;
 import com.example.dogsapp.model.DogDao;
 import com.example.dogsapp.model.DogDatabase;
-import com.example.dogsapp.model.DogsApi;
+
 import com.example.dogsapp.model.DogsApiService;
 import com.example.dogsapp.util.NotificationsHelper;
 import com.example.dogsapp.util.SharedPreferencesHelper;
@@ -19,7 +19,6 @@ import com.example.dogsapp.util.SharedPreferencesHelper;
 import java.util.ArrayList;
 import java.util.List;
 
-import io.reactivex.Scheduler;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.CompositeDisposable;
 import io.reactivex.observers.DisposableSingleObserver;

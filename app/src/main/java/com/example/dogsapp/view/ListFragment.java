@@ -6,10 +6,9 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProvider;
+
 import androidx.lifecycle.ViewModelProviders;
-import androidx.navigation.NavDirections;
+
 import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -25,11 +24,8 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.example.dogsapp.R;
-import com.example.dogsapp.model.DogBreed;
-import com.example.dogsapp.viewmodel.ListViewModel;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
-import org.w3c.dom.Text;
+import com.example.dogsapp.viewmodel.ListViewModel;
 
 import java.util.ArrayList;
 import java.util.List;

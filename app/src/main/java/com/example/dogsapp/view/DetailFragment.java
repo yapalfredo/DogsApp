@@ -12,10 +12,8 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.palette.graphics.Palette;
-import androidx.swiperefreshlayout.widget.CircularProgressDrawable;
 
 import android.telephony.SmsManager;
 import android.view.LayoutInflater;
@@ -24,9 +22,6 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.target.CustomTarget;
@@ -37,12 +32,8 @@ import com.example.dogsapp.databinding.SendSmsDialogBinding;
 import com.example.dogsapp.model.DogBreed;
 import com.example.dogsapp.model.DogPalette;
 import com.example.dogsapp.model.Smsinfo;
-import com.example.dogsapp.util.Util;
-import com.example.dogsapp.viewmodel.DetailViewModel;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
-import io.reactivex.Observable;
+import com.example.dogsapp.viewmodel.DetailViewModel;
 
 
 public class DetailFragment extends Fragment {

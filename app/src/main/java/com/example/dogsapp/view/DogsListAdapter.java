@@ -3,8 +3,7 @@ package com.example.dogsapp.view;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
+
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -15,7 +14,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.dogsapp.R;
 import com.example.dogsapp.databinding.ItemDogBinding;
 import com.example.dogsapp.model.DogBreed;
-import com.example.dogsapp.util.Util;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -39,8 +37,8 @@ public class DogsListAdapter extends RecyclerView.Adapter<DogsListAdapter.DogVie
     @NonNull
     @Override
     public DogViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        LayoutInflater inflater= LayoutInflater.from(parent.getContext());
-        ItemDogBinding view = DataBindingUtil.inflate(inflater, R.layout.item_dog, parent,false);
+        LayoutInflater inflater = LayoutInflater.from(parent.getContext());
+        ItemDogBinding view = DataBindingUtil.inflate(inflater, R.layout.item_dog, parent, false);
         return new DogViewHolder(view);
     }
 
@@ -52,7 +50,7 @@ public class DogsListAdapter extends RecyclerView.Adapter<DogsListAdapter.DogVie
 
     @Override
     public void onDogClicked(View view) {
-        String uuidString = ((TextView)view.findViewById(R.id.dogId)).getText().toString();
+        String uuidString = ((TextView) view.findViewById(R.id.dogId)).getText().toString();
         int uuid = Integer.valueOf(uuidString);
         ListFragmentDirections.ActionDetail action = ListFragmentDirections.actionDetail();
         action.setDogUuid(uuid);
