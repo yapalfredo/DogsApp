@@ -1,4 +1,6 @@
 # DogsApp
 Jetpacks Android Java Masterclass Tutorial
 
-This repo is the project that was created for the Android Jetpack Masterclass course I bought from Udemy (https://bit.ly/2KZeRIy)
+This app was created from following the <b>Android Jetpack Masterclass<b> in Java course I bought from Udemy.
+For this project 
+(https://bit.ly/2KZeRIy)
