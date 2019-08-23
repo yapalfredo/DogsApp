@@ -10,9 +10,11 @@ This app was created from following the <b>Android Jetpack Masterclass in Java</
 - Room
 - Data Binding
 - Glide
+- RecyclerView
+- Notifications
 
 # Demo
 ![Alt text](Screenshot/demo.gif?raw=true "demo")
 
-
-Go and buy the course from this link (https://bit.ly/2KZeRIy) and support the instructor.
+# Go check the course out
+ https://bit.ly/2KZeRIy and support the instructor.
