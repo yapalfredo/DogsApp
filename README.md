@@ -11,4 +11,8 @@ This app was created from following the <b>Android Jetpack Masterclass in Java</
 - Data Binding
 - Glide
 
+# Demo
+![Alt text](Screenshot/demo.gif?raw=true "demo")
+
+
 Go and buy the course from this link (https://bit.ly/2KZeRIy) and support the instructor.
